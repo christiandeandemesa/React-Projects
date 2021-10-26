@@ -10,7 +10,7 @@ function App(){
         <PersonCard firstName = {'James'} lastName = {'Demesa'} age = {6} hairColor = {'Brown'} />
         <PersonCard firstName = {'Mateo'} lastName = {'Demesa'} age = {2} hairColor = {'Black'}/>
         <PersonCard firstName = {'Elizabeth'} lastName = {'Demesa'} age = {0} hairColor = {'Brown'}/>
-    </div>
+      </div>
     );
 }
 
