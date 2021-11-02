@@ -6,12 +6,12 @@ const UserForm = props => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
-    const [hasBeenSubmitted, setHasBeenSubmitted] = useState(false);
     const [firstNameError, setFirstNameError] = useState("");
     const [lastNameError, setLastNameError] = useState("");
     const [emailError, setEmailError] = useState("");
     const [passwordError, setPasswordError] = useState("");
     const [confirmPasswordError, setConfirmPasswordError] = useState("");
+    const [hasBeenSubmitted, setHasBeenSubmitted] = useState(false);
 
     const createUser = e => {
         e.preventDefault();
@@ -44,7 +44,7 @@ const UserForm = props => {
             <form onSubmit = {createUser}>
                 <div>
                     <label>First Name: </label>
-                    <input type = 'text' onChange={e => setFirstName(e.target.value)} />
+                    <input type = 'text' onChange={e => setFirstName(e.target.value)} value = {firstName}/>
                     {
                         firstNameError ?
                         <p>{firstNameError}</p>:
@@ -53,7 +53,7 @@ const UserForm = props => {
                 </div>
                 <div>
                     <label>Last Name: </label>
-                    <input type = 'text' onChange={e => setLastName(e.target.value)} />
+                    <input type = 'text' onChange={e => setLastName(e.target.value)} value = {lastName}/>
                     {
                         lastNameError ?
                         <p>{lastNameError}</p>:
@@ -62,7 +62,7 @@ const UserForm = props => {
                 </div>
                 <div>
                     <label>Email: </label>
-                    <input type = 'text' onChange={e => setEmail(e.target.value)} />
+                    <input type = 'email' onChange={e => setEmail(e.target.value)} value = {email}/>
                     {
                         emailError ?
                         <p>{emailError}</p>:
@@ -71,7 +71,7 @@ const UserForm = props => {
                 </div>
                 <div>
                     <label>Password: </label>
-                    <input type = 'password' onChange={e => setPassword(e.target.value)} />
+                    <input type = 'password' onChange={e => setPassword(e.target.value)} value = {password}/>
                     {
                         passwordError ?
                         <p>{passwordError}</p>:
@@ -80,7 +80,7 @@ const UserForm = props => {
                 </div>
                 <div>
                     <label>Confirm Password: </label>
-                    <input type = 'password' onChange={e => setConfirmPassword(e.target.value)} />
+                    <input type = 'password' onChange={e => setConfirmPassword(e.target.value)} value = {confirmPassword}/>
                     {
                         confirmPasswordError ?
                         <p>{confirmPasswordError}</p>:
